@@ -1,0 +1,34 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Nexlus Hub")
+
+local serv = win:Server("Maru Hub", "")
+
+local btns = serv:Channel("หน้าหลัก")
+
+btns:Button("Maru Hub สคิป ปกติ 6 Map", function()
+getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
+getgenv().id = "852722210154086401"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+btns:Button("Maru Hub สคิปภาษาไทย Blox fruit", function()
+getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
+getgenv().id = "852722210154086401"
+_G.Script_Language = "Thai"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+btns:Button("Maru Hub Kaitun Mode Blox fruit", function()
+getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
+getgenv().id = "852722210154086401"
+getgenv().Script_Mode = "Kaitun_Script"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+btns:Button("Maru Hub PVP MODE", function()
+getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
+getgenv().id = "852722210154086401"
+_G.Script_Mode = "PVP"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
