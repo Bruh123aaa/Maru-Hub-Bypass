@@ -5,7 +5,9 @@ local win = DiscordLib:Window("Nexlus Hub")
 local serv = win:Server("สคิปต่างๆ", "")
 
 local btns = serv:Channel("Maru Hub")
-
+local bf = serv:Channel("สคิป บล็อกฟุต")
+local kl = serv:Channel("สคิป คิงพีช")
+local asn = serv:Channel("สคิป อาเซนอล")
 
 btns:Button("Maru Hub สคิป ปกติ 6 Map", function()
 getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
@@ -32,4 +34,18 @@ getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
 getgenv().id = "852722210154086401"
 _G.Script_Mode = "PVP"
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+bf:Button("Neva hub บล็อกฟุต", function()
+--Blox fruit-Neva-Hub
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+end)
+
+kl:Button("One X Hub คิงพีช", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/King-Legacy/main/README.md"))()
+end)
+
+asn:Button("อาเซนอล จำชื่อ Hubไม่ได้555!!", function()
+--Arsenal
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/UltimateCromaSin-Arsenal-Gui/main/AdvanceTechV2.lua"))()
 end)
