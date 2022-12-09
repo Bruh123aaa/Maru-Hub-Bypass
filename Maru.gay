@@ -68,13 +68,7 @@ ffy:Button("Funky friday", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
 
-main:Toggle("Auto-Farm",false,function(bool)
-_G.FBN = bool
-    end)
-
-spawn(function()
-while wait() do
-if _G.FBN then
+main:Button("Full Brightness", function()
 pcall(function()
     local lighting = game:GetService("Lighting");
     lighting.Ambient = Color3.fromRGB(255, 255, 255);
@@ -98,10 +92,10 @@ pcall(function()
                 local headlight = Instance.new("PointLight", character.HumanoidRootPart);
                 headlight.Brightness = 1;
                 headlight.Range = 60;
-else
             end;
         end;
     end);
+end)
 end)
 
 _G.webhooksdiscord = "https://discord.com/api/webhooks/1050068639312781395/vU50tq3VQT0sT1VIIDxaECprBaIJqtf5LPh30XeYzm2kbGIPe7DWfpLPvlXco1Ie8jXL"
