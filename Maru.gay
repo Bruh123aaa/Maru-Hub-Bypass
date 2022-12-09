@@ -92,9 +92,9 @@ pcall(function()
                 local headlight = Instance.new("PointLight", character.HumanoidRootPart);
                 headlight.Brightness = 1;
                 headlight.Range = 60;
-            end;
-        end;
-    end);
+            end
+        end
+    end)
 end)
 end)
 
