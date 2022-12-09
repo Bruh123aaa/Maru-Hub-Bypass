@@ -68,7 +68,7 @@ ffy:Button("Funky friday", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
 
-main;:Toggle("Noclip (Not sure Bug or Not Bug!!!)",false,function(Nc)
+main;:Toggle("Noclip Not sure Bug or Not Bug!!!)",false,function(Nc)
 _G.noclip = Nc
 end)
 
