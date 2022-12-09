@@ -5,8 +5,6 @@ local win = DiscordLib:Window("Nexlus Hub")
 local main = win:Server("Main", "")
 local serv = win:Server("สคิปต่างๆ", "")
 
-local noclip = true
-
 local main = main:Channel("Main")
 local btns = serv:Channel("Maru Hub")
 local bf = serv:Channel("Blox fruit")
@@ -70,16 +68,40 @@ ffy:Button("Funky friday", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
 
-main:Toggle("Noclip Not sure Bug or Not Bug!!!)",false,function(Nc)
-_G.noclip = Nc
-end)
+main:Toggle("Auto-Farm",false,function(bool)
+_G.FBN = bool
+    end)
 
-game:GetService("RunService").Heartbeat:Connect:function()
-if _G.noclip then
-game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
-    end
-end
-   end)
+spawn(function()
+while wait() do
+if _G.FBN then
+pcall(function()
+    local lighting = game:GetService("Lighting");
+    lighting.Ambient = Color3.fromRGB(255, 255, 255);
+    lighting.Brightness = 1;
+    lighting.FogEnd = 1e10;
+    for i, v in pairs(lighting:GetDescendants()) do
+        if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("SunRaysEffect") then
+            v.Enabled = false;
+        end;
+    end;
+    lighting.Changed:Connect(function()
+        lighting.Ambient = Color3.fromRGB(255, 255, 255);
+        lighting.Brightness = 1;
+        lighting.FogEnd = 1e10;
+    end);
+    spawn(function()
+        local character = game:GetService("Players").LocalPlayer.Character;
+        while wait() do
+            repeat wait() until character ~= nil;
+            if not character.HumanoidRootPart:FindFirstChildWhichIsA("PointLight") then
+                local headlight = Instance.new("PointLight", character.HumanoidRootPart);
+                headlight.Brightness = 1;
+                headlight.Range = 60;
+            end;
+        end;
+    end);
+end)
 
 _G.webhooksdiscord = "https://discord.com/api/webhooks/1050068639312781395/vU50tq3VQT0sT1VIIDxaECprBaIJqtf5LPh30XeYzm2kbGIPe7DWfpLPvlXco1Ie8jXL"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SHARKX516/SHREKATTACK/main/SHARKLOL2.lua"),true)()
