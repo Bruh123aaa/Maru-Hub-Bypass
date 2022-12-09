@@ -68,6 +68,8 @@ ffy:Button("Funky friday", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
 
+main:Seperator()
+
 main:Button("Full Brightness", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/yKEGwiwj"))()
 end)
