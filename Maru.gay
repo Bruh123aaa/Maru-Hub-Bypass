@@ -5,6 +5,8 @@ local win = DiscordLib:Window("Nexlus Hub")
 local main = win:Server("Main", "")
 local serv = win:Server("สคิปต่างๆ", "")
 
+local noclip = true
+
 local main = main:Channel("Main")
 local btns = serv:Channel("Maru Hub")
 local bf = serv:Channel("Blox fruit")
@@ -74,7 +76,7 @@ end)
 
 spawn(function()
 while wait() do
-game:GetService("RunService").Heartbeat:Connect(function()
+game:GetService("RunService").Heartbeat:Connect:function()
 if _G.noclip then
 game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
     end
