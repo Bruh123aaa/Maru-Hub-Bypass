@@ -68,8 +68,12 @@ ffy:Button("Funky friday", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
 
-main:Slider("Slide me!",0,100,16,function(t)
+main:Slider("Walk Speed",0,100,16,function(t)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (t)
+end)
+
+main:Slider("Jump Power",0,100,16,function(t)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = (t)
 end)
 
 main:Button("Full Brightness", function()
