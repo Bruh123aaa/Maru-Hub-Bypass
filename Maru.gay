@@ -74,8 +74,6 @@ main;:Toggle("Noclip Not sure Bug or Not Bug!!!)",false,function(Nc)
 _G.noclip = Nc
 end)
 
-spawn(function()
-while wait() do
 game:GetService("RunService").Heartbeat:Connect:function()
 if _G.noclip then
 game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
