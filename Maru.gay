@@ -11,6 +11,7 @@ local bf = serv:Channel("Blox fruit")
 local kl = serv:Channel("King Legacy")
 local asn = serv:Channel("Arsenal")
 local ffy = serv:Channel("Funky Friday")
+local bkb = serv:Channel("Broken B")
 
 btns:Button("Maru Hub สคิป ปกติ 6 Map", function()
 getgenv().Key = "MARU-RYEZL-5CA-WKDTR-U7X-78LF"
@@ -66,6 +67,10 @@ ffy:Button("Funky friday", function()
 -- fluxteam.net
 -- Made by Wally, modded by ShowerHeadFD
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
+end)
+
+bkb:Button("Broken Bones", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/BvfHPTQE"))()
 end)
 
 main:Slider("Walk Speed",0,100,16,function(t)
