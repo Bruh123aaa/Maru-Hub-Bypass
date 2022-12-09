@@ -3,7 +3,7 @@ local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/daw
 local win = DiscordLib:Window("Nexlus Hub")
 
 local main = win:Server("Main", "")
-local serv = win:Server("สคิปต่างๆ", "")
+local serv = win:Server("สคิปต่างๆ", "http://www.roblox.com/asset/?id=6031075938")
 
 local main = main:Channel("Main")
 local btns = serv:Channel("Maru Hub")
@@ -68,7 +68,9 @@ ffy:Button("Funky friday", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
 end)
 
-main:Seperator()
+main:Slider("Slide me!",0,100,16,function(t)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (t)
+end)
 
 main:Button("Full Brightness", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/yKEGwiwj"))()
